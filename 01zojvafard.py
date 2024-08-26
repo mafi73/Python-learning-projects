@@ -1,4 +1,4 @@
-#peyda kardane addae zoj va fard va amnfi va sefr
+#"just A simple exercise for finding even and odd numbers using the Python programming language."
 x=input('adad vared konid? ')
 x=int(x)
 if x>0:
