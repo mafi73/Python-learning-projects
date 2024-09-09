@@ -1,3 +1,4 @@
+#convert as a function
 s=input('please give a string? ')
 list=[]
 for i in s:
