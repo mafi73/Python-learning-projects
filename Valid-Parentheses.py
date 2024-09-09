@@ -1,3 +1,4 @@
+#Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 #convert as a function
 def func(ValidP):
     list=[]
