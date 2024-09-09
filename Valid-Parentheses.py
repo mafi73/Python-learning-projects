@@ -1,20 +1,22 @@
 #convert as a function
-s=input('please give a string? ')
-list=[]
-for i in s:
-    if i in '([{':
-        list.append(i)
-    elif not list:
-        print ('False')
-    elif i==')':
-        if list.pop() != '(':
-            print ('False')
-    elif i=='}':
-        if list.pop() != '{':
-            print ('False')
-    elif i==']':
-        if list.pop() != '[':
-            print ('False')
-if list:
-    print ('False')
-print (True)
+def func(ValidP):
+    list=[]
+    for i in validP:
+        if i in '([{':
+            list.append(i)
+        elif not list:
+            return False
+        elif i==')':
+            if list.pop() != '(':
+                return False
+        elif i=='}':
+            if list.pop() != '{':
+                return False
+        elif i==']':
+            if list.pop() != '[':
+                return False
+    if list:
+        return False
+    return True
+validP="(){"
+print(func(validP))
