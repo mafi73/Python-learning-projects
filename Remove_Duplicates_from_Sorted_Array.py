@@ -11,4 +11,4 @@ while (i+1)<len(array):
     else:
         i+=1
 print(array) #print array without duplicate
-print(c) #numbers of duplicated numbers
+print(c) #number of duplicated numbers
