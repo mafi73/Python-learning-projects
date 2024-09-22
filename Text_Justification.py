@@ -1,3 +1,5 @@
+#Leetcode Problems
+#https://leetcode.com/problems/text-justification/description/
 list=["This", "is", "an", "example", "of", "text", "justification."]
 maxWidth=16
 lines=[]#خطوط نهایی
