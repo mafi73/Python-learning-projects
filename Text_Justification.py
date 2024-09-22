@@ -9,14 +9,21 @@ for w in list:
         current_lenght += len(w)
     else:
         fazaha = maxWidth - current_lenght #koole fazahaye khali
-        if len(current_line)==1: #فقط یک کلمه
+        if len(current_line)==1: #تک کلمه ای
             line=current_line[0]+(fazaha*' ')#
         else:
             fazaye_vasat = fazaha // (len(current_line)-1)#tedade faza bein kalamat
             space_namosavi=fazaha % (len(current_line)-1)#adad
             space= fazaye_vasat*' ' #tedad space ha
-            line=space.join(current_line[:space_namosavi+1])+space+space.join(current_line[space_namosavi+1:])
-        lines.append(line)
+            strline=''
+            for i in range(len(current_line)-1):
+                strline += current_line[i]
+                if i < space_namosavi:
+                    strline += ' ' *((fazaye_vasat)+1)#ezafe kardan faza ezafe be samte chap tar
+                else:
+                    strline += ' '*fazaye_vasat
+            strline += current_line[-1] #ezafe kardan kalame akhar bedone space
+        lines.append(strline)
         current_lenght=len(w)
         current_line=[w]
 final_line=' '.join(current_line)+ ' '*(maxWidth - len(' '.join(current_line)))
