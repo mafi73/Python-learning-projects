@@ -3,8 +3,8 @@
 #https://leetcode.com/problems/text-justification/description/
 list=["What","must","be","acknowledgment","shall","be"]
 maxWidth=16
-lines=[]#خطوط نهایی
-current_line=[] #کلمات خط فعلی
+lines=[]
+current_line=[] 
 current_lenght=0
 for w in list:
     if current_lenght +len(w) + len(current_line) <= maxWidth:
@@ -12,7 +12,7 @@ for w in list:
         current_lenght += len(w)
     else:
         fazaha = maxWidth - current_lenght #koole fazahaye khali
-        if len(current_line)==1: #تک کلمه ای
+        if len(current_line)==1: 
             strline=current_line[0]+(fazaha * ' ')#
         else:
             fazaye_vasat = fazaha // (len(current_line)-1)#tedade faza bein kalamat
